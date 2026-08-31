@@ -1,0 +1,263 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-background">
+    <div class="hero-overlay"></div>
+    <img
+      src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt="Team collaboration"
+      class="hero-image"
+    />
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in">Votre partenaire de recrutement international</span>
+      <h1 class="hero-title animate-fade-in-up">
+        Relions les <span class="text-primary">entreprises europeennes</span> aux <span class="text-primary">talents du monde</span>
+      </h1>
+      <p class="hero-description animate-fade-in-up">
+        ITLA Talent Solutions facilite le recrutement international en identifiant, selectionnant et accompagnant les meilleurs candidats pour vos besoins en France et en Europe.
+      </p>
+      <div class="hero-cta animate-fade-in-up">
+        <a routerLink="/contact" class="btn btn-primary btn-lg">
+          Demarrer un projet
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a routerLink="/about" class="btn btn-outline btn-lg">Decouvrir ITLA</a>
+      </div>
+      <div class="hero-stats">
+        @for (stat of statistics; track stat.label; let i = $index) {
+          <div class="hero-stat-item">
+            <span class="stat-value" #statValue>0</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <span>Defiler</span>
+  </div>
+</section>
+
+<!-- Mission Section -->
+<section class="section mission-section">
+  <div class="container">
+    <div class="mission-grid" #animateElement>
+      <div class="mission-content">
+        <span class="section-subtitle">Notre mission</span>
+        <h2 class="section-title">Creer des opportunites, construire des vies</h2>
+        <p class="mission-text">
+          Chez ITLA Talent Solutions, nous croyons que le talent n'a pas de frontieres. Notre mission est de connecter les entreprises europeennes a des professionnels qualifies du monde entier, en facilitant une integration reussie pour les candidats et leurs familles.
+        </p>
+        <p class="mission-text">
+          Nous nous engageons a offrir un accompagnement personnalise, de la premiere prise de contact jusqu'a l'integration complete dans leur nouvel environnement professionnel et personnel.
+        </p>
+        <a routerLink="/about" class="btn btn-primary">
+          En savoir plus
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="mission-image">
+        <img
+          src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Team meeting"
+          class="mission-img"
+        />
+        <div class="mission-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <span class="card-number">15+</span>
+            <span class="card-label">Pays partenaires</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="section services-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Nos services</span>
+      <h2 class="section-title">Des solutions adaptees a vos besoins</h2>
+      <p class="section-description">
+        De la selection des candidats a leur integration complete, nous vous accompagnons a chaque etape du processus de recrutement international.
+      </p>
+    </div>
+    <div class="services-grid">
+      @for (service of services; track service.title; let i = $index) {
+        <div class="service-card" [style.animation-delay]="i * 0.1 + 's'">
+          <div class="service-image">
+            <img [src]="service.image" [alt]="service.title" />
+            <div class="service-overlay">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path [attr.d]="getIcon(service.icon)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">{{ service.title }}</h3>
+            <p class="service-description">{{ service.description }}</p>
+            <a routerLink="/services" class="service-link">
+              En savoir plus
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="section-cta">
+      <a routerLink="/services" class="btn btn-primary btn-lg">
+        Decouvrir tous nos services
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Sectors Preview Section -->
+<section class="section sectors-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Secteurs d'activite</span>
+      <h2 class="section-title">Expertise sectorielle</h2>
+      <p class="section-description">
+        Nous intervenons dans de nombreux secteurs pour repondre aux besoins specifiques de chaque industrie.
+      </p>
+    </div>
+    <div class="sectors-grid">
+      @for (sector of sectors; track sector.title) {
+        <a routerLink="/sectors" class="sector-card">
+          <div class="sector-image">
+            <img [src]="sector.image" [alt]="sector.title" />
+          </div>
+          <div class="sector-content">
+            <h3 class="sector-title">{{ sector.title }}</h3>
+            <span class="sector-positions">{{ sector.positions }} postes disponibles</span>
+          </div>
+          <div class="sector-overlay">
+            <span class="sector-btn">
+              Explorer
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+      }
+    </div>
+    <div class="section-cta">
+      <a routerLink="/sectors" class="btn btn-outline btn-lg">
+        Voir tous les secteurs
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="section why-section bg-primary" #animateElement>
+  <div class="container">
+    <div class="section-header text-white">
+      <span class="section-subtitle text-white">Pourquoi nous choisir</span>
+      <h2 class="section-title text-white">L'excellence au service de votre recrutement</h2>
+      <p class="section-description text-white">
+        Decouvrez les avantages qui font de ITLA votre partenaire ideal pour le recrutement international.
+      </p>
+    </div>
+    <div class="why-grid">
+      @for (item of whyChooseUs; track item.title; let i = $index) {
+        <div class="why-card" [style.animation-delay]="i * 0.1 + 's'">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path [attr.d]="getIcon(item.icon)"/>
+            </svg>
+          </div>
+          <h3 class="why-title">{{ item.title }}</h3>
+          <p class="why-description">{{ item.description }}</p>
+        </div>
+      }
+    </div>
+    <div class="section-cta">
+      <a routerLink="/why-us" class="btn btn-white btn-lg">
+        En savoir plus
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section testimonials-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Temoignages</span>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+      <p class="section-description">
+        Decouvrez les retours d'experience de nos partenaires et candidats.
+      </p>
+    </div>
+    <div class="testimonials-grid">
+      @for (testimonial of testimonials; track testimonial.name) {
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-rating">
+              @for (i of [1,2,3,4,5]; track i) {
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" [class.active]="i <= testimonial.rating">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              }
+            </div>
+          </div>
+          <p class="testimonial-content">"{{ testimonial.content }}"</p>
+          <div class="testimonial-author">
+            <img [src]="testimonial.image" [alt]="testimonial.name" class="author-image" />
+            <div class="author-info">
+              <span class="author-name">{{ testimonial.name }}</span>
+              <span class="author-role">{{ testimonial.role }} - {{ testimonial.company }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section" #animateElement>
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text">
+        <h2 class="cta-title">Pret a booster votre recrutement ?</h2>
+        <p class="cta-description">
+          Contactez-nous des aujourd'hui pour discuter de vos besoins en recrutement international. Notre equipe est prete a vous accompagner.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a routerLink="/contact" class="btn btn-primary btn-lg">
+          Nous contacter
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a routerLink="/process" class="btn btn-outline btn-lg">
+          Notre processus
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

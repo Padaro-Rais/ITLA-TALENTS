@@ -1,0 +1,198 @@
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="hero-background">
+    <img
+      src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt="Pourquoi nous choisir"
+    />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in">Pourquoi nous choisir</span>
+      <h1 class="hero-title animate-fade-in-up">L'excellence au service de votre recrutement</h1>
+      <p class="hero-description animate-fade-in-up">
+        Decouvrez les avantages qui font de ITLA votre partenaire ideal pour le recrutement international.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="section benefits-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Nos avantages</span>
+      <h2 class="section-title">6 raisons de nous choisir</h2>
+      <p class="section-description">
+        Chaque avantage a ete construit pour maximiser votre succes et celui de vos futurs collaborateurs.
+      </p>
+    </div>
+    <div class="benefits-grid">
+      @for (benefit of benefits; track benefit.title; let i = $index) {
+        <div class="benefit-card" #animateElement>
+          <div class="benefit-icon" [style.background]="benefit.color + '15'" [style.color]="benefit.color">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path [attr.d]="benefit.icon"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">{{ benefit.title }}</h3>
+          <p class="benefit-description">{{ benefit.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ROI Section -->
+<section class="section roi-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Retour sur investissement</span>
+      <h2 class="section-title">Des resultats mesurables</h2>
+      <p class="section-description">
+        Nos clients constatent des ameliorations tangibles des la premiere collaboration.
+      </p>
+    </div>
+    <div class="roi-grid">
+      @for (advantage of advantages; track advantage.title) {
+        <div class="roi-card" #animateElement>
+          <div class="roi-stat">
+            <span class="stat-value">{{ advantage.stat }}</span>
+            <span class="stat-label">{{ advantage.statLabel }}</span>
+          </div>
+          <div class="roi-content">
+            <h3>{{ advantage.title }}</h3>
+            <p>{{ advantage.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="section comparison-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Comparatif</span>
+      <h2 class="section-title">ITLA vs Recrutement classique</h2>
+    </div>
+    <div class="comparison-table">
+      <div class="comparison-header">
+        <div class="comparison-cell empty"></div>
+        <div class="comparison-cell ITLA">
+          <span class="logo-text">ITLA</span>
+        </div>
+        <div class="comparison-cell other">
+          <span>Recrutement classique</span>
+        </div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cell label">Acces candidats internationaux</div>
+        <div class="comparison-cell ITLA">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <div class="comparison-cell other">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cell label">Accompagnement integration</div>
+        <div class="comparison-cell ITLA">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <div class="comparison-cell other">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cell label">Formation linguistique</div>
+        <div class="comparison-cell ITLA">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <div class="comparison-cell other">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cell label">Gestion administrative</div>
+        <div class="comparison-cell ITLA">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <div class="comparison-cell other">
+          <span class="partial">Partiel</span>
+        </div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cell label">Suivi post-integration</div>
+        <div class="comparison-cell ITLA">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <div class="comparison-cell other">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section testimonials-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Temoignages</span>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+    </div>
+    <div class="testimonials-grid">
+      @for (testimonial of testimonials; track testimonial.name) {
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.459l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.459l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="testimonial-content">"{{ testimonial.content }}"</p>
+          <div class="testimonial-author">
+            <img [src]="testimonial.image" [alt]="testimonial.name" />
+            <div class="author-info">
+              <span class="author-name">{{ testimonial.name }}</span>
+              <span class="author-role">{{ testimonial.role }} - {{ testimonial.company }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-box" #animateElement>
+      <h2>Pret a transformer votre recrutement ?</h2>
+      <p>Contactez-nous pour discuter de vos besoins et decouvrir comment nous pouvons vous aider.</p>
+      <a routerLink="/contact" class="btn btn-white btn-lg">
+        Demarrer un projet
+      </a>
+    </div>
+  </div>
+</section>

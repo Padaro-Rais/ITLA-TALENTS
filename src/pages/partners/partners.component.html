@@ -1,0 +1,141 @@
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="hero-background">
+    <img
+      src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt="Partenaires"
+    />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in">Nos partenaires</span>
+      <h1 class="hero-title animate-fade-in-up">Un reseau international solide</h1>
+      <p class="hero-description animate-fade-in-up">
+        Plus de 50 partenaires dans 15 pays nous font confiance pour leurs besoins en recrutement international.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Enterprise Partners Section -->
+<section class="section partners-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Entreprises</span>
+      <h2 class="section-title">Elles nous font confiance</h2>
+      <p class="section-description">
+        Des entreprises de toutes tailles nous choisissent pour leurs besoins en recrutement.
+      </p>
+    </div>
+    <div class="partners-grid">
+      @for (partner of enterprisePartners; track partner.name) {
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img [src]="partner.logo" [alt]="partner.name" />
+          </div>
+          <div class="partner-info">
+            <h4>{{ partner.name }}</h4>
+            <span>{{ partner.country }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Educational Partners -->
+<section class="section schools-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Ecoles & Universites</span>
+      <h2 class="section-title">Nos partenaires academiques</h2>
+      <p class="section-description">
+        Nous collaborons avec les meilleures institutions educatives pour identifier les talents de demain.
+      </p>
+    </div>
+    <div class="partners-grid">
+      @for (partner of schoolPartners; track partner.name) {
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img [src]="partner.logo" [alt]="partner.name" />
+          </div>
+          <div class="partner-info">
+            <h4>{{ partner.name }}</h4>
+            <span>{{ partner.country }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Training Partners -->
+<section class="section training-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Centres de formation</span>
+      <h2 class="section-title">Partenaires de formation</h2>
+      <p class="section-description">
+        Des centres de formation qualifiants pour preparer au mieux nos candidats.
+      </p>
+    </div>
+    <div class="partners-grid small">
+      @for (partner of trainingPartners; track partner.name) {
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img [src]="partner.logo" [alt]="partner.name" />
+          </div>
+          <div class="partner-info">
+            <h4>{{ partner.name }}</h4>
+            <span>{{ partner.country }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Countries Section -->
+<section class="section countries-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Notre empreinte</span>
+      <h2 class="section-title">Present dans 15+ pays</h2>
+    </div>
+    <div class="countries-grid">
+      @for (country of countries; track country.name) {
+        <div class="country-card">
+          <span class="country-flag">{{ country.flag }}</span>
+          <div class="country-info">
+            <h4>{{ country.name }}</h4>
+            <span>{{ country.count }} candidats</span>
+          </div>
+        </div>
+      }
+    </div>
+    <!-- World Map Placeholder -->
+    <div class="world-map">
+      <img src="https://images.pexels.com/photo-4194931/pexels-photo-4194931.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="World Map" />
+      <div class="map-overlay">
+        <div class="map-dot france" [style.left]="'45%'" [style.top]="'35%'"></div>
+        <div class="map-dot germany" [style.left]="'50%'" [style.top]="'30%'"></div>
+        <div class="map-dot poland" [style.left]="'55%'" [style.top]="'28%'"></div>
+        <div class="map-dot romania" [style.left]="'58%'" [style.top]="'32%'"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Become Partner CTA -->
+<section class="section cta-section bg-primary" #animateElement>
+  <div class="container">
+    <div class="cta-content">
+      <h2>Devenir partenaire</h2>
+      <p>Vous etes une entreprise, ecole ou centre de formation ? Rejoignez notre reseau de partenaires.</p>
+      <a routerLink="/contact" class="btn btn-white btn-lg">
+        Nous contacter
+      </a>
+    </div>
+  </div>
+</section>

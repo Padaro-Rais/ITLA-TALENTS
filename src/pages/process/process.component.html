@@ -1,0 +1,165 @@
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="hero-background">
+    <img
+      src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt="Processus"
+    />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in">Notre processus</span>
+      <h1 class="hero-title animate-fade-in-up">Une methode eprouvee pour des resultats garantis</h1>
+      <p class="hero-description animate-fade-in-up">
+        Decouvrez les 6 etapes cles de notre processus de recrutement international, concu pour maximiser votre succes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Process Overview -->
+<section class="section process-overview">
+  <div class="container">
+    <div class="overview-grid" #animateElement>
+      <div class="overview-content">
+        <span class="section-subtitle">Approche methodologique</span>
+        <h2 class="section-title">Un process optimise</h2>
+        <p class="overview-text">
+          Notre processus de recrutement a ete affinee au fil de plus de 500 placements reussis. Chaque etape est concue pour garantir une experience optimale tant pour les candidats que pour les entreprises.
+        </p>
+        <div class="overview-stats">
+          <div class="overview-stat">
+            <span class="stat-value">98%</span>
+            <span class="stat-label">Taux de reussite</span>
+          </div>
+          <div class="overview-stat">
+            <span class="stat-value">45j</span>
+            <span class="stat-label">Delai moyen</span>
+          </div>
+          <div class="overview-stat">
+            <span class="stat-value">500+</span>
+            <span class="stat-label">Placements reussis</span>
+          </div>
+        </div>
+      </div>
+      <div class="overview-image">
+        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Processus" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Les 6 etapes cles</span>
+      <h2 class="section-title">De l'analyse a l'integration</h2>
+      <p class="section-description">
+        Chaque etape est structuree pour garantir qualite, transparence et efficacite.
+      </p>
+    </div>
+
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+
+      @for (step of processSteps; track step.number; let i = $index) {
+        <div class="timeline-item" [class.right]="i % 2 === 1" #animateElement>
+          <div class="timeline-content">
+            <div class="step-image">
+              <img [src]="step.image" [alt]="step.title" />
+            </div>
+            <div class="step-info">
+              <div class="step-header">
+                <span class="step-number">{{ step.number }}</span>
+                <span class="step-duration">{{ step.duration }}</span>
+              </div>
+              <div class="step-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path [attr.d]="step.icon"/>
+                </svg>
+              </div>
+              <h3 class="step-title">{{ step.title }}</h3>
+              <p class="step-description">{{ step.description }}</p>
+              <ul class="step-details">
+                @for (detail of step.details; track detail) {
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 13l4 4L19 7"/>
+                    </svg>
+                    {{ detail }}
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-marker">
+            <div class="marker-inner"></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Guarantee Section -->
+<section class="section guarantee-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Nos garanties</span>
+      <h2 class="section-title">L'engagement ITLA</h2>
+    </div>
+    <div class="guarantee-grid">
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Delais respectes</h3>
+        <p>Nous nous engageons sur des delais clairs et les respectons.</p>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3>Garantie qualite</h3>
+        <p>Selection rigoureuse avec verification complete des candidats.</p>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+        </div>
+        <h3>Support continu</h3>
+        <p>Un interlocuteur dedie disponible tout au long du processus.</p>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3>Rapport dettagle</h3>
+        <p>Suivi regulier avec compte-rendu d'avancement a chaque etape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-box" #animateElement>
+      <h2>Pret a lancer votre projet de recrutement ?</h2>
+      <p>Discutons de vos besoins et de la facon dont notre process peut s'adapter a votre entreprise.</p>
+      <a routerLink="/contact" class="btn btn-white btn-lg">
+        Demarrer un projet
+      </a>
+    </div>
+  </div>
+</section>

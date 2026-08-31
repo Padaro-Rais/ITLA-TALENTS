@@ -1,0 +1,302 @@
+$primary-red: #C41E3A;
+$primary-red-dark: #9E1830;
+$secondary-yellow: #F4B942;
+$accent-green: #2E8B57;
+$white: #FFFFFF;
+$off-white: #F8F9FA;
+$light-gray: #E9ECEF;
+$medium-gray: #6C757D;
+$dark-gray: #343A40;
+$black: #212529;
+
+// ========================================
+// Page Hero
+// ========================================
+.page-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba($black, 0.8) 0%, rgba($primary-red, 0.5) 100%);
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba($secondary-yellow, 0.2);
+      border: 1px solid $secondary-yellow;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $secondary-yellow;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      color: $white;
+      margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      color: rgba($white, 0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// ========================================
+// Partners Section
+// ========================================
+.partners-section,
+.schools-section,
+.training-section {
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    &.small {
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .partner-card {
+    background: $white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .partner-logo {
+      height: 60px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &:hover .partner-logo img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    .partner-info {
+      h4 {
+        font-size: 1rem;
+        color: $black;
+        margin-bottom: 0.25rem;
+      }
+
+      span {
+        font-size: 0.85rem;
+        color: $medium-gray;
+      }
+    }
+  }
+}
+
+// ========================================
+// Countries Section
+// ========================================
+.countries-section {
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .country-card {
+    background: $white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .country-flag {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .country-info {
+      h4 {
+        font-size: 0.95rem;
+        color: $black;
+        margin-bottom: 0.25rem;
+      }
+
+      span {
+        font-size: 0.8rem;
+        color: $medium-gray;
+      }
+    }
+  }
+
+  .world-map {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .map-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      .map-dot {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: $primary-red;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba($primary-red, 0.3);
+        animation: pulse 2s infinite;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 8px;
+          background: $white;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+// ========================================
+// CTA Section
+// ========================================
+.cta-section {
+  background: linear-gradient(135deg, $primary-red 0%, $primary-red-dark 100%);
+  color: $white;
+  text-align: center;
+
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+
+    h2 {
+      color: $white;
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 576px) {
+        font-size: 1.75rem;
+      }
+    }
+
+    p {
+      color: rgba($white, 0.85);
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.bg-light {
+  background-color: $off-white;
+}
+
+.bg-primary {
+  background-color: $primary-red;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba($primary-red, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba($primary-red, 0);
+  }
+}

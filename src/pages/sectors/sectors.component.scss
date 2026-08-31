@@ -1,0 +1,321 @@
+$primary-red: #C41E3A;
+$primary-red-dark: #9E1830;
+$secondary-yellow: #F4B942;
+$accent-green: #2E8B57;
+$white: #FFFFFF;
+$off-white: #F8F9FA;
+$light-gray: #E9ECEF;
+$medium-gray: #6C757D;
+$dark-gray: #343A40;
+$black: #212529;
+
+// ========================================
+// Page Hero
+// ========================================
+.page-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba($black, 0.8) 0%, rgba($primary-red, 0.5) 100%);
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba($secondary-yellow, 0.2);
+      border: 1px solid $secondary-yellow;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $secondary-yellow;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      color: $white;
+      margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      color: rgba($white, 0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// ========================================
+// Sectors Section
+// ========================================
+.sectors-section {
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sector-card {
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+      .sector-image img {
+        transform: scale(1.1);
+      }
+    }
+
+    .sector-image {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .sector-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60%;
+      }
+    }
+
+    .sector-content {
+      padding: 1.5rem;
+
+      .sector-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        @media (max-width: 576px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+
+        .sector-title {
+          font-size: 1.35rem;
+          color: $black;
+          margin: 0;
+        }
+
+        .sector-positions {
+          font-size: 0.85rem;
+          color: $medium-gray;
+
+          strong {
+            color: $primary-red;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .sector-description {
+        color: $medium-gray;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .sector-jobs {
+        margin-bottom: 1.5rem;
+
+        h4 {
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $dark-gray;
+          margin-bottom: 0.75rem;
+        }
+
+        .jobs-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+
+          .job-tag {
+            padding: 0.35rem 0.75rem;
+            background: $off-white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: $dark-gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ========================================
+// Stats Section
+// ========================================
+.stats-section {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stat-card {
+    background: $white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+      .stat-icon {
+        background: $primary-red;
+        color: $white;
+      }
+    }
+
+    .stat-icon {
+      width: 70px;
+      height: 70px;
+      background: rgba($primary-red, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: $primary-red;
+      transition: all 0.3s ease;
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $black;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: $medium-gray;
+    }
+  }
+}
+
+// ========================================
+// CTA Section
+// ========================================
+.cta-section {
+  .cta-box {
+    background: linear-gradient(135deg, $primary-red 0%, $primary-red-dark 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .cta-content {
+      h2 {
+        color: $white;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+
+        @media (max-width: 576px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        color: rgba($white, 0.85);
+        max-width: 500px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.bg-light {
+  background-color: $off-white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

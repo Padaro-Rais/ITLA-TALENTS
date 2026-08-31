@@ -1,0 +1,171 @@
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="hero-background">
+    <img
+      src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt="Services"
+    />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in">Nos services</span>
+      <h1 class="hero-title animate-fade-in-up">Des solutions completes pour votre recrutement</h1>
+      <p class="hero-description animate-fade-in-up">
+        De l'identification des talents a leur integration complete, nous vous proposons un accompagnement sur mesure a chaque etape.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid Section -->
+<section class="section services-section">
+  <div class="container">
+    <div class="services-list">
+      @for (service of services; track service.id; let i = $index; let odd = $odd) {
+        <div class="service-block" [class.reverse]="odd" #animateElement>
+          <div class="service-image-wrapper">
+            <img [src]="service.image" [alt]="service.title" class="service-image" />
+            <div class="service-number">0{{ i + 1 }}</div>
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path [attr.d]="service.icon"/>
+              </svg>
+            </div>
+            <h2 class="service-title">{{ service.title }}</h2>
+            <p class="service-description">{{ service.description }}</p>
+            <ul class="service-features">
+              @for (feature of service.features; track feature) {
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"/>
+                  </svg>
+                  {{ feature }}
+                </li>
+              }
+            </ul>
+            <a routerLink="/contact" class="btn btn-primary">
+              Demander un devis
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Why Our Services Section -->
+<section class="section why-services-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Pourquoi nous faire confiance</span>
+      <h2 class="section-title">Un partenaire engage a vos cotes</h2>
+      <p class="section-description">
+        Chaque service est concu pour vous offrir une experience optimale et des resultats concrets.
+      </p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Rapidite d'execution</h3>
+        <p>Des delais courts pour repondre a vos besoins urgents de recrutement.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3>Garantie qualite</h3>
+        <p>Selection rigoureuse des candidats avec verification complete des competences.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <h3>Accompagnement humain</h3>
+        <p>Une equipe dediee qui vous accompagne personnellement tout au long du processus.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3>Transparence totale</h3>
+        <p>Un suivi regulier et des rapports detailles sur l'avancement de votre projet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Preview -->
+<section class="section process-preview" #animateElement>
+  <div class="container">
+    <div class="process-grid">
+      <div class="process-content">
+        <span class="section-subtitle">Notre methode</span>
+        <h2 class="section-title">Un processus eprouve pour des resultats garantis</h2>
+        <p>Notre methodologie en 5 etapes assure une approche structuree et efficace pour chaque projet de recrutement.</p>
+        <div class="process-steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h4>Analyse des besoins</h4>
+              <p>Comprehension approfondie de votre entreprise et du poste a pourvoir</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h4>Sourcing</h4>
+              <p>Recherche active des meilleurs candidats dans notre reseau international</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h4>Selection</h4>
+              <p>Entretiens, tests et verifications pour identifier les profils ideals</p>
+            </div>
+          </div>
+        </div>
+        <a routerLink="/process" class="btn btn-primary">
+          Decouvrir notre processus complet
+        </a>
+      </div>
+      <div class="process-image">
+        <img src="https://images.pexels.com/photo-3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Process" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-box" #animateElement>
+      <h2>Pret a demarrer votre projet de recrutement ?</h2>
+      <p>Contactez-nous pour discuter de vos besoins et obtenir une proposition personnalisee.</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-white btn-lg">
+          Nous contacter
+        </a>
+        <a routerLink="/sectors" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
+          Voir nos secteurs
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

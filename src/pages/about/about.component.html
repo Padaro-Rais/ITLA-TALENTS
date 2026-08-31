@@ -1,0 +1,206 @@
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="hero-background">
+    <img
+      src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt="ITLA Team"
+    />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in">A propos</span>
+      <h1 class="hero-title animate-fade-in-up">Notre histoire, notre mission</h1>
+      <p class="hero-description animate-fade-in-up">
+        Decouvrez l'equipe passionnee qui fait de ITLA Talent Solutions votre partenaire de confiance pour le recrutement international.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Story Section -->
+<section class="section story-section" #animateElement>
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-images">
+        <img
+          src="https://images.pexels.com/photos/3184407/pexels-photo-3184407.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="ITLA Office"
+          class="story-img-1"
+        />
+        <img
+          src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Team collaboration"
+          class="story-img-2"
+        />
+        <div class="experience-badge">
+          <span class="badge-number">10+</span>
+          <span class="badge-text">ans d'experience</span>
+        </div>
+      </div>
+      <div class="story-content">
+        <span class="section-subtitle">Notre histoire</span>
+        <h2 class="section-title">Une passion pour le talent international</h2>
+        <div class="story-text">
+          <p>
+            Fondee en 2015, ITLA Talent Solutions est nee d'une vision simple mais puissante : les talents n'ont pas de frontieres. Nos fondateurs, forts de leur experience dans le recrutement international, ont identifie un besoin croissant des entreprises europeennes en quete de competences qualifiees.
+          </p>
+          <p>
+            Aujourd'hui, nous sommes fiers d'avoir accompagne plus de 500 candidats vers de nouvelles opportunites professionnelles en France et en Europe, tout en aidant nos entreprises partenaires a constituer des equipes talentueuses et diversifiees.
+          </p>
+          <p>
+            Notre approche unique combine expertise du marche de l'emploi europeen, reseau international solide et accompagnement humain personnalise. Chaque placement est une succes story que nous construisons ensemble.
+          </p>
+        </div>
+        <div class="story-stats">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Candidats places</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Entreprises partenaires</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Pays representes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision Section -->
+<section class="section mission-vision-section" #animateElement>
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card mission-card">
+        <div class="mv-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 16v-4M12 8h.01"/>
+          </svg>
+        </div>
+        <h3>Notre Mission</h3>
+        <p>
+          Faciliter le recrutement international en connectant les meilleurs talents aux entreprises europeennes, avec un accompagnement humain et personnalise.
+        </p>
+      </div>
+      <div class="mv-card vision-card">
+        <div class="mv-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3>Notre Vision</h3>
+        <p>
+          Devenir le partenaire de reference pour le recrutement international en Europe, reconnu pour notre excellence operationnelle et notre impact positif sur la vie des candidats et des entreprises.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="section values-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Nos valeurs</span>
+      <h2 class="section-title">Les principes qui nous guident</h2>
+      <p class="section-description">
+        Nos valeurs fondamentales sont au coeur de tout ce que nous faisons chez ITLA.
+      </p>
+    </div>
+    <div class="values-grid">
+      @for (value of values; track value.title; let i = $index) {
+        <div class="value-card" [style.animation-delay]="i * 0.1 + 's'">
+          <div class="value-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path [attr.d]="value.icon"/>
+            </svg>
+          </div>
+          <h3 class="value-title">{{ value.title }}</h3>
+          <p class="value-description">{{ value.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section timeline-section" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Notre parcours</span>
+      <h2 class="section-title">Les etapes cles de notre histoire</h2>
+      <p class="section-description">
+        Un parcours marque par la croissance, l'innovation et l'engagement envers nos valeurs.
+      </p>
+    </div>
+    <div class="timeline">
+      @for (milestone of milestones; track milestone.year; let i = $index; let odd = $odd) {
+        <div class="timeline-item" [class.right]="odd">
+          <div class="timeline-content">
+            <span class="timeline-year">{{ milestone.year }}</span>
+            <h3 class="timeline-title">{{ milestone.title }}</h3>
+            <p class="timeline-description">{{ milestone.description }}</p>
+          </div>
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="section team-section bg-light" #animateElement>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Notre equipe</span>
+      <h2 class="section-title">Les visages derriere ITLA</h2>
+      <p class="section-description">
+        Une equipe passionnee et experimentee, dediee a votre succes.
+      </p>
+    </div>
+    <div class="team-grid">
+      @for (member of team; track member.name; let i = $index) {
+        <div class="team-card" [style.animation-delay]="i * 0.1 + 's'">
+          <div class="team-image">
+            <img [src]="member.image" [alt]="member.name" />
+            <div class="team-overlay">
+              <p>{{ member.bio }}</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">{{ member.name }}</h3>
+            <span class="team-role">{{ member.role }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section" #animateElement>
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-content">
+        <h2>Rejoignez l'aventure ITLA</h2>
+        <p>Que vous soyez une entreprise en recherche de talents ou un candidat en quete d'opportunites, nous sommes la pour vous accompagner.</p>
+      </div>
+      <div class="cta-actions">
+        <a routerLink="/contact" class="btn btn-primary btn-lg">
+          Contactez-nous
+        </a>
+        <a routerLink="/services" class="btn btn-outline btn-lg">
+          Nos services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
