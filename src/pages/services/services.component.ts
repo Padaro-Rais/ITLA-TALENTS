@@ -37,7 +37,7 @@ export class ServicesComponent implements AfterViewInit {
         'Accompagnement jusqu\’à l\’intégration dans votre entreprise'
       ],
       icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: './assets/a8.jpg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 'hr-support',
@@ -52,7 +52,7 @@ export class ServicesComponent implements AfterViewInit {
         'Suivi RH personnalisé avant et après l\’arrivée du candidat'
       ],
       icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
-      image: 'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: './assets/multicultural-business-team-meeting-photo.jpg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 'language',
@@ -97,7 +97,7 @@ export class ServicesComponent implements AfterViewInit {
         'Suivi après l’installation et la prise de poste'
       ],
       icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9',
-      image: 'https://images.pexels.com/photos/46148/airplane-taking-off-sky-flight-clouds-46148.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: './assets/image-a-propos-2.png?auto=compress&cs=tinysrgb&w=800'
     },
     {
       id: 'training',

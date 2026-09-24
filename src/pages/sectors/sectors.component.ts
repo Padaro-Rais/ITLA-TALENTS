@@ -40,7 +40,7 @@ export class SectorsComponent implements AfterViewInit {
       title: 'Sante & Medical',
       description: 'Professionnels de sante qualifies : infirmiers, aides-soignants, medecins et techniciens medicaux pour les etablissements de sante.',
       icon: 'health',
-      image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: './assets/a6.jpeg?auto=compress&cs=tinysrgb&w=800',
       positions: 85,
       color: '#2E8B57',
       jobs: ['Infirmier(ere)', 'Aide-soignant(e)', 'Medecin', 'Technicien Medical', 'Psychologue']
@@ -70,7 +70,7 @@ export class SectorsComponent implements AfterViewInit {
       title: 'BTP & Construction',
       description: 'Macons, electriciens, plombiers, chefs de chantier et ingenieurs genie civil pour tous vos projets de construction.',
       icon: 'construction',
-      image: 'https://images.pexels.com/photos/276024/pexels-photo-276024.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: './assets/a7.jpg?auto=compress&cs=tinysrgb&w=800',
       positions: 75,
       color: '#8B4513',
       jobs: ['Macon', 'Electricien', 'Plombier', 'Chef de chantier', 'Ingenieur BTP']

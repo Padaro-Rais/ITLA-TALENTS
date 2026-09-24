@@ -25,7 +25,9 @@
             }
           },
           "options": {
-            "assets": ["src/assets"],
+             "assets": [
+              "src/assets"
+            ],
             "index": "src/index.html",
             "browser": "src/main.ts",
             "outputPath": "dist/ITLA-talent",

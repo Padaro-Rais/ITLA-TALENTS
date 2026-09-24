@@ -56,25 +56,25 @@ export class HomeComponent implements AfterViewInit {
       title: 'Recrutement international',
       description: 'Identification et selection des meilleurs talents a l\'international',
       icon: 'search',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: './assets/a2.jpg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       title: 'Accompagnement RH',
       description: 'Support complet pour l\'integration de vos nouvelles recrues',
       icon: 'support',
-      image: 'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: './assets/a3.webp?auto=compress&cs=tinysrgb&w=600'
     },
     {
       title: 'Formation linguistique',
       description: 'Cours de langue adaptes pour une integration reussie',
       icon: 'language',
-      image: 'https://images.pexels.com/photos/4226256/pexels-photo-4226256.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: './assets/a4.webp?auto=compress&cs=tinysrgb&w=600'
     },
     {
       title: 'Integration complete',
       description: 'Accompagnement administratif et logement sur place',
       icon: 'home',
-      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: './assets/a5.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
   ];
 
@@ -85,9 +85,9 @@ sectors: Sector[] = [
     image: 'https://images.pexels.com/photos/11765539/pexels-photo-11765539.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
-    title: 'Sante & Medical',
+    title: 'Sant & Medical',
     positions: 85,
-    image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=400'
+    image: './assets/a6.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     title: 'Logistique & Transport',
