@@ -78,12 +78,28 @@ export class HomeComponent implements AfterViewInit {
     }
   ];
 
-  sectors: Sector[] = [
-    { title: 'Industrie & Production', positions: 120, image: 'https://images.pexels.com/photos/216146/pexels-photo-216146.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { title: 'Sante & Medical', positions: 85, image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { title: 'Logistique & Transport', positions: 65, image: 'https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { title: 'IT & Digital', positions: 90, image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400' }
-  ];
+sectors: Sector[] = [
+  {
+    title: 'Industrie & Production',
+    positions: 120,
+    image: 'https://images.pexels.com/photos/11765539/pexels-photo-11765539.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    title: 'Sante & Medical',
+    positions: 85,
+    image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    title: 'Logistique & Transport',
+    positions: 65,
+    image: 'https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    title: 'IT & Digital',
+    positions: 90,
+    image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400'
+  }
+];
 
   testimonials: Testimonial[] = [
     {
@@ -102,14 +118,14 @@ export class HomeComponent implements AfterViewInit {
       content: 'Le suivi personnalise et le professionnalisme de l\'equipe ont fait toute la difference.',
       rating: 5
     },
-    {
-      name: 'Sophie Martin',
-      role: 'Responsable Recrutement',
-      company: 'HealthCare Plus',
-      image: 'https://images.pexels.com/photos/7749090/pexels-photo-7749090.jpeg?auto=compress&cs=tinysrgb&w=150',
-      content: 'Grace a ITLA, nous avons trouve des infirmieres formees et motivees en provenance d\'Europe de l\'Est.',
-      rating: 5
-    }
+{
+  name: 'Sophie Martin',
+  role: 'Responsable Recrutement',
+  company: 'HealthCare Plus',
+  image: 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=150',
+  content: 'Grace a ITLA, nous avons trouve des infirmieres formees et motivees en provenance d\'Europe de l\'Est.',
+  rating: 5
+}
   ];
 
   whyChooseUs = [

@@ -94,12 +94,12 @@ export class AboutComponent implements AfterViewInit {
   ];
 
   team: TeamMember[] = [
-    {
-      name: 'Sophie Martin',
-      role: 'Directrice Generale',
-      image: 'https://images.pexels.com/photos/3764359/pexels-photo-3764359.jpeg?auto=compress&cs=tinysrgb&w=300',
-      bio: 'Plus de 15 ans d\'experience dans le recrutement international et les ressources humaines.'
-    },
+{
+  name: 'Sophie Martin',
+  role: 'Directrice Generale',
+  image: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=300',
+  bio: 'Plus de 15 ans d\'experience dans le recrutement international et les ressources humaines.'
+},
     {
       name: 'Thomas Muller',
       role: 'Directeur Operations',

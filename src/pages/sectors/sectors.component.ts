@@ -30,7 +30,7 @@ export class SectorsComponent implements AfterViewInit {
       title: 'Industrie & Production',
       description: 'Operateurs, techniciens, ingenieurs et responsables de production pour le secteur industriel. Nous trouvons les profils adaptes a vos installations de production.',
       icon: 'industry',
-      image: 'https://images.pexels.com/photos/216146/pexels-photo-216146.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/11765539/pexels-photo-11765539.jpeg?auto=compress&cs=tinysrgb&w=400',
       positions: 120,
       color: '#C41E3A',
       jobs: ['Operateur de production', 'Technicien de maintenance', 'Ingenieur process', 'Responsable production', 'Chef d\'equipe']

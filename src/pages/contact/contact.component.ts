@@ -33,10 +33,10 @@ export class ContactComponent implements AfterViewInit {
   ];
 
   contactInfo = {
-    address: '123 Avenue de l\'Europe, 75008 Paris, France',
-    phone: '+33 1 23 45 67 89',
-    email: 'contact@ITLA-talent.com',
-    hours: 'Lundi - Vendredi: 9h00 - 18h00'
+    address: 'Graf-Metternich-Str 14 54329 Konz Deutschland',
+    phone: '+4965019473148 / +22872699939 /  00491722088570',
+    email: 'cinfo@itlaacademy.de',
+    hours: 'Lundi - Vendredi: 8h00 - 18h00'
   };
 
   faqs: { question: string; answer: string; isOpen: boolean }[] = [
