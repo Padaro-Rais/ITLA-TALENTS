@@ -48,9 +48,8 @@ export class PartnersComponent implements AfterViewInit {
     { name: 'France', flag: '🇫🇷', count: 25 },
     { name: 'Allemagne', flag: '🇩🇪', count: 30 },
     { name: 'Pologne', flag: '🇵🇱', count: 15 },
-    { name: 'Roumanie', flag: '🇷🇴', count: 20 },
-    { name: 'Bulgarie', flag: '🇧🇬', count: 12 },
-    { name: 'Ukraine', flag: '🇺🇦', count: 18 }
+    { name: 'Belgique', flag: '🇧🇪', count: 20 },
+    { name: 'Pays-Bas', flag: '🇳🇱', count: 18 },
   ];
 
   constructor(private animationService: AnimationService) {}
